@@ -23,5 +23,12 @@ obj/src/libgeo/plosh_treug.o:
 	$(CC) -o obj/src/libgeo/plosh_treug.o $(CFLAGS) $(INCLUDEPATH) -lm $(LIBSOURCE)plosh_treug.c
 obj/src/libgeo/check.o: 
 	$(CC) -o obj/src/libgeo/check.o $(CFLAGS) $(INCLUDEPATH) -lm $(LIBSOURCE)check.c
+test: bin/test 
+bin/test: obj/src/test/main.o obj/src/test/geometry_test.o obj/src/libgeo/lib.a
+	$(CC) -o bin/test obj/src/test/main.o obj/src/test/geometry_test.o obj/src/libgeo/lib.a -lm
+obj/src/test/main.o: 
+	$(CC) -o obj/src/test/main.o $(CFLAGS) $(INCLUDEPATHHH) -lm test/main.c
+obj/src/test/geometry_test.o: 
+	$(CC) -o obj/src/test/geometry_test.o $(CFLAGS) $(INCLUDEPATHHH) $(INCLUDEPATH) -lm test/geometry_test.c
 clean:
 	rm -rf
