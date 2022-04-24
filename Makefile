@@ -21,6 +21,6 @@ obj/src/libgeo/plosh_krug.o:
 	$(CC) -o obj/src/libgeo/plosh_krug.o $(CFLAGS) $(INCLUDEPATH) -lm $(LIBSOURCE)plosh_krug.c
 obj/src/libgeo/plosh_treug.o: 
 	$(CC) -o obj/src/libgeo/plosh_treug.o $(CFLAGS) $(INCLUDEPATH) -lm $(LIBSOURCE)plosh_treug.c
-
+test: bin/test
 clean:
 	rm -rf
