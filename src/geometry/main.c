@@ -14,7 +14,7 @@ void initInput(char array[32])
 }
 
 int main()
-{	printf("Vvedite po ocheride koordinati kruga i treugolnika v lubom poradke, ispolzuya grammatiku EBNF\n");
+{	printf("Vvedite po ocheride koordinati kruga i treugolnika imenno v etom poradke, ispolzuya grammatiku EBNF\n");
   char* input = malloc(sizeof(char) * 32);
     initInput(input);
     char delims[] = "( ,)";
