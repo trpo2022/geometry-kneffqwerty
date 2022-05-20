@@ -73,7 +73,7 @@ int main()
         return 0;
     }
     char* qqq = malloc(sizeof(char) * 32);
-    gets(qqq);
+    fgets(qqq, 32, stdin);
 	initInput(qqq);
     
    	char del[] = "( ,)";
