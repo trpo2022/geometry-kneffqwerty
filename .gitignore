@@ -1,0 +1,8 @@
+*.exe
+*.swp
+*.out
+*main
+*.o
+*.a
+*geometry
+*test
